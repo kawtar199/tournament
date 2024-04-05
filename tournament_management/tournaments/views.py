@@ -12,6 +12,8 @@ def tournament_registration(request):
         form = TournamentForm()
     return render(request, 'tournaments/tournament_registration.html', {'form': form})
 
+def home(request):
+    return render(request,'tournaments/' 'home.html')
 
 def tournament_list(request):
     tournaments = Tournament.objects.all()

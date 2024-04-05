@@ -1,0 +1,24 @@
+<!-- templates/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+</head>
+<body>
+    <h1>Bienvenue sur la page d'accueil</h1>
+    <ul>
+        <li><a href="{% url 'tournament_registration' %}">Inscription au tournoi</a></li>
+        <li><a href="{% url 'match_list' %}">Liste des matchs</a></li>
+        <li><a href="{% url 'statistics' %}">Statistiques</a></li>
+        <li><a href="{% url 'match_detail' match_id=1 %}">Détail du match</a></li>
+        <li><a href="{% url 'update_match' match_id=1 %}">Mettre à jour le match</a></li>
+        <li><a href="{% url 'record_scores' match_id=1 %}">Enregistrer les scores</a></li>
+        <li><a href="{% url 'determine_winner' match_id=1 %}">Déterminer le vainqueur</a></li>
+        <li><a href="{% url 'create_participant' %}">Créer un participant</a></li>       
+         <li><a href="{% url 'create_match' %}">Créer un nouveau match</a></li>
+        <li><a href="{% url 'tournament_list' %}">Liste des tournois</a></li>
+    </ul>
+</body>
+</html>
