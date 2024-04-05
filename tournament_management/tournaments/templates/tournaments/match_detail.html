@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Match Detail</title>
+</head>
+<body>
+    <h1>Match Detail</h1>
+    <p><strong>Tournament:</strong> {{ match.tournament }}</p>
+    <p><strong>Home Team:</strong> {{ match.home_team }}</p>
+    <p><strong>Away Team:</strong> {{ match.away_team }}</p>
+    <p><strong>Date:</strong> {{ match.date }}</p>
+    <p><strong>Home Score:</strong> {{ match.home_score }}</p>
+    <p><strong>Away Score:</strong> {{ match.away_score }}</p>
+    <a href="{% url 'update_match' match.id %}">Update Match</a>
+    <a href="{% url 'record_scores' match.id %}">Record Scores</a>
+    <a href="{% url 'determine_winner' match.id %}">Determine Winner</a>
+</body>
+</html>

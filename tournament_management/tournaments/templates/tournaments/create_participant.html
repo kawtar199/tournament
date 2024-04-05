@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Participant</title>
+</head>
+<body>
+    <h1>Create Participant</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div>
+            <label for="id_first_name">First Name:</label>
+            <input type="text" id="id_first_name" name="first_name">
+        </div>
+        <div>
+            <label for="id_last_name">Last Name:</label>
+            <input type="text" id="id_last_name" name="last_name">
+        </div>
+        <div>
+            <label for="id_date_of_birth">Date of Birth:</label>
+            <input type="date" id="id_date_of_birth" name="date_of_birth">
+        </div>
+        <button type="submit">Create Participant</button>
+    </form>
+</body>
+</html>
